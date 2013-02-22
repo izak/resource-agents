@@ -1,0 +1,5 @@
+01_docbook_patch.patch
+02_spelling_fixes.patch
+CVE-2010-3389--bug598549.patch
+mysql-path.patch
+fix-gethostinfo-v2.patch

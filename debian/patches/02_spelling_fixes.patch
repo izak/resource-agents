@@ -1,0 +1,74 @@
+Index: resource-agents-3.9.2/heartbeat/SAPInstance
+===================================================================
+--- resource-agents-3.9.2.orig/heartbeat/SAPInstance	2011-06-29 08:51:48.000000000 -0400
++++ resource-agents-3.9.2/heartbeat/SAPInstance	2011-07-05 15:16:34.878441662 -0400
+@@ -125,7 +125,7 @@
+   <content type="string" default="3600" />
+  </parameter>
+  <parameter name="AUTOMATIC_RECOVER" unique="0" required="0">
+-  <longdesc lang="en">The SAPInstance resource agent tries to recover a failed start attempt automaticaly one time. This is done by killing runing instance processes, removing the kill.sap file and executing cleanipc. Sometimes a crashed SAP instance leaves some processes and/or shared memory segments behind. Setting this option to true will try to remove those leftovers during a start operation. That is to reduce manual work for the administrator.</longdesc>
++  <longdesc lang="en">The SAPInstance resource agent tries to recover a failed start attempt automatically one time. This is done by killing runing instance processes, removing the kill.sap file and executing cleanipc. Sometimes a crashed SAP instance leaves some processes and/or shared memory segments behind. Setting this option to true will try to remove those leftovers during a start operation. That is to reduce manual work for the administrator.</longdesc>
+   <shortdesc lang="en">Enable or disable automatic startup recovery</shortdesc>
+   <content type="boolean" default="false"/>
+  </parameter>
+@@ -142,7 +142,7 @@
+ 
+ That names match the strings used in the output of the command 'sapcontrol -nr [Instance-Nr] -function GetProcessList'.
+ The default should fit most cases where you want to manage a SAP Instance from the cluster. You may change this with this parameter, if you like to monitor more/less or other services that sapstartsrv supports.
+-You may specify multiple services seperated by a | (pipe) sign in this parameter: disp+work|msg_server|enserver
++You may specify multiple services separated by a | (pipe) sign in this parameter: disp+work|msg_server|enserver
+   </longdesc>
+   <shortdesc lang="en">Services to monitor</shortdesc>
+   <content type="string" default="disp+work|msg_server|enserver|enrepserver|jcontrol|jstart"/>
+Index: resource-agents-3.9.2/heartbeat/nginx
+===================================================================
+--- resource-agents-3.9.2.orig/heartbeat/nginx	2011-06-29 08:51:48.000000000 -0400
++++ resource-agents-3.9.2/heartbeat/nginx	2011-07-05 15:16:34.878441662 -0400
+@@ -720,7 +720,7 @@
+ Client to use to query to Nginx for level 10 and level 20 tests.
+ If not specified, the RA will try to find one on the system.
+ Currently, wget and curl are supported, with curl being preferred.
+-For example, you can set this paramter to "wget" if you prefer that to curl.
++For example, you can set this parameter to "wget" if you prefer that to curl.
+ </longdesc>
+ <shortdesc lang="en">http client</shortdesc>
+ <content type="string" />
+Index: resource-agents-3.9.2/heartbeat/nfsserver
+===================================================================
+--- resource-agents-3.9.2.orig/heartbeat/nfsserver	2011-06-29 08:51:48.000000000 -0400
++++ resource-agents-3.9.2/heartbeat/nfsserver	2011-07-05 15:16:34.878441662 -0400
+@@ -23,7 +23,7 @@
+ <version>1.0</version>
+ 
+ <longdesc lang="en">
+-Nfsserver helps to manage the Linux nfs server as a failover-able resource in Linux-HA.
++Nfsserver helps one to manage the Linux nfs server as a failover-able resource in Linux-HA.
+ It depends on Linux specific NFS implementation details, so is considered not portable to other platforms yet.
+ </longdesc>
+ 
+Index: resource-agents-3.9.2/heartbeat/scsi2reservation
+===================================================================
+--- resource-agents-3.9.2.orig/heartbeat/scsi2reservation	2011-06-29 08:51:48.000000000 -0400
++++ resource-agents-3.9.2/heartbeat/scsi2reservation	2011-07-05 15:16:34.878441662 -0400
+@@ -35,7 +35,7 @@
+ <parameter name="scsi_reserve" unique="0" required="0">
+ <longdesc lang="en">
+ The scsi_reserve is a command from scsires package. 
+-It helps to issue SCSI-2 reservation on SCSI devices.
++It helps one to issue SCSI-2 reservation on SCSI devices.
+ </longdesc>
+ <shortdesc lang="en">Manages exclusive access to shared storage media thrugh SCSI-2 reservations</shortdesc>
+ <content type="string" default="/usr/sbin/scsi_reserve" />
+Index: resource-agents-3.9.2/heartbeat/LVM
+===================================================================
+--- resource-agents-3.9.2.orig/heartbeat/LVM	2011-06-29 08:51:48.000000000 -0400
++++ resource-agents-3.9.2/heartbeat/LVM	2011-07-05 15:16:34.878441662 -0400
+@@ -82,7 +82,7 @@
+ <parameter name="partial_activation" unique="0" required="0">
+ <longdesc lang="en">
+ If set, the volume group will be activated even only partial of the physical
+-volumes available. It helps to set to true, when you are using mirroring
++volumes available. It helps one to set to true, when you are using mirroring
+ logical volumes.
+ </longdesc>
+ <shortdesc lang="en">Activate VG even with partial PV only</shortdesc>
