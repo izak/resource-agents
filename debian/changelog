@@ -1,3 +1,10 @@
+resource-agents (1:3.9.5-1) testing-proposed-updates; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream release
+
+ -- Izak Burger <isburger@gmail.com>  Fri, 22 Feb 2013 14:52:00 +0200
+
 resource-agents (1:3.9.2-5+deb7u1) testing-proposed-updates; urgency=low
 
   * Non-maintainer upload.
